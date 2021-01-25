@@ -1,6 +1,6 @@
 {
-  "short_name": "Mobile Service PWA",
-  "name": "Mobile Service PWA",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
       "src": "favicon.ico",

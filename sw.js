@@ -37,7 +37,7 @@ var appShellFiles = [
 
 var contentToCache = appShellFiles;
 
-self.addEventListener('install', (e) => {
+this.addEventListener('install', (e) => {
     console.log('[Service Worker] Install');
     e.waitUntil(
       caches.open(cacheName).then((cache) => {
@@ -48,7 +48,7 @@ self.addEventListener('install', (e) => {
   });
 
 
-  self.addEventListener('fetch', (e) => {
+  this.addEventListener('fetch', (e) => {
     e.respondWith(
       caches.match(e.request).then((r) => {
             console.log('[Service Worker] Fetching resource: '+e.request.url);
