@@ -1,11 +1,11 @@
 //let cacheData = "appV1";
 var CACHE_NAME = 'appV1';
 var urlsToCache = [
-    "/static/js/bundle.js",
-    "/static/js/main.chunk.js",
-    "/static/js/0.chunk.js",
-    "/index.html",
-    "/"
+    "./static/js/bundle.js",
+    "./static/js/main.chunk.js",
+    "./static/js/0.chunk.js",
+    "./index.html",
+    "./"
 ];
 this.addEventListener('install', function(event) {
   event.waitUntil(
