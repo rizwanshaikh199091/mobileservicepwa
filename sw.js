@@ -1,10 +1,10 @@
 var cacheName = 'js13kPWA-v1';
 var appShellFiles = [
-    "/static/js/bundle.js",
-    "/static/js/main.chunk.js",
-    "/static/js/0.chunk.js",
-    "/index.html",
-    "/"
+    "./static/js/bundle.js",
+    "./static/js/main.chunk.js",
+    "./static/js/0.chunk.js",
+    "./index.html",
+    "./"
 ];
 
 var contentToCache = appShellFiles;
