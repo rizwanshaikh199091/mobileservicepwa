@@ -5,7 +5,6 @@ var cached_urls = [
    // "/static/js/0.chunk.js",
     "/index.html",
     "/",
-    "menifest.json",
     "/logo144.png"
 ];
 
