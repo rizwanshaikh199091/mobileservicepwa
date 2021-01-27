@@ -22,9 +22,11 @@ self.addEventListener('install', function(event) {
         // fichiers à mettre impérativement en cache
         return staticCache.addAll([
           "./",
-          //"./static/js/bundle.js",
-          //"./static/js/main.chunk.js",
-         // "./static/js/0.chunk.js",
+          "./static/js/2.6b7225e7.chunk.js",
+          "./static/css/2.150d169a.chunk.css",
+         "./static/js/main.148619a0.chunk.js",
+         "./static/js/runtime-main.cfbbd54e.js",
+         "./static/css/main.fbea70ed.chunk.css",
           "./index.html",
           "./logo144.png"
         ])
