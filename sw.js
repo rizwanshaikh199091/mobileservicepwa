@@ -1,8 +1,8 @@
 var cache_name = 'mspwa-cache';
 var cached_urls = [
-    "/static/js/bundle.js",
-    "/static/js/main.chunk.js",
-    "/static/js/0.chunk.js",
+    //"/static/js/bundle.js",
+   // "/static/js/main.chunk.js",
+   // "/static/js/0.chunk.js",
     "/index.html",
     "/",
     "menifest.json",
@@ -23,9 +23,9 @@ self.addEventListener('install', function(event) {
         // fichiers à mettre impérativement en cache
         return staticCache.addAll([
           "./",
-          "./static/js/bundle.js",
-          "./static/js/main.chunk.js",
-          "./static/js/0.chunk.js",
+          //"./static/js/bundle.js",
+          //"./static/js/main.chunk.js",
+         // "./static/js/0.chunk.js",
           "./index.html",
           "./menifest.json",
           "./logo144.png"
