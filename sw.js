@@ -22,9 +22,9 @@ self.addEventListener('install', function(event) {
         // fichiers à mettre impérativement en cache
         return staticCache.addAll([
           "./",
-          "./static/js/2.fb3894cd.chunk.js",
+          "./static/js/2.0db823a5.chunk.js",
           "./static/css/2.620f3d88.chunk.css",
-         "./static/js/main.3b4a716d.chunk.js",
+         "./static/js/main.6bdf109a.chunk.js",
          "./static/js/runtime-main.5bc791e0.js",
          "./static/css/main.155c1d57.chunk.css",
           "./index.html",
@@ -72,3 +72,23 @@ self.addEventListener('fetch', function(event) {
       })
     );
   });
+  
+
+  //function that gets the location and returns it
+function getLocation() {
+  if(navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    console.log("Geo Location not supported by browser");
+  }
+}
+//function that retrieves the position
+function showPosition(position) {
+  var location = {
+    longitude: position.coords.longitude,
+    latitude: position.coords.latitude
+  }
+  console.log(location)
+}
+//request for location
+getLocation();
