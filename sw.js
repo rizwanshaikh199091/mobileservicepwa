@@ -22,10 +22,10 @@ self.addEventListener('install', function(event) {
         // fichiers à mettre impérativement en cache
         return staticCache.addAll([
           "./",
-          "./static/js/2.fa88dfde.chunk.js",
-          "./static/css/2.620f3d88.chunk.css",
-         "./static/js/main.37be8eda.chunk.js",
-         "./static/js/runtime-main.5bc791e0.js",
+          "./static/js/2.4aa9735b.chunk.js",
+          "./static/css/2.cd8bafaa.chunk.css",
+         "./static/js/main.8de19acc.chunk.js",
+         "./static/js/runtime-main.cfbbd54e.js",
          "./static/css/main.155c1d57.chunk.css",
           "./index.html",
           "./logo144.png"
@@ -49,6 +49,14 @@ self.addEventListener('activate', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
+
+  //if(event.request.url==='http://localhost:3000/static/js/main.chunk.js'){
+    event.waitUntil(
+        self.registration.showNotification("Hello",{
+          body:"Hello From test push ntoifcation",
+        })
+    )
+  //}
     console.log('Fetch event for ', event.request.url);
     event.respondWith(
       caches.match(event.request).then(function(response) {
@@ -71,5 +79,10 @@ self.addEventListener('fetch', function(event) {
         return caches.match('offline.html');
       })
     );
+
+
+    
   });
+
+  
  
