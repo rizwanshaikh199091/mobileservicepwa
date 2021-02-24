@@ -22,10 +22,10 @@ self.addEventListener('install', function(event) {
         // fichiers à mettre impérativement en cache
         return staticCache.addAll([
           "./",
-          "./static/js/2.4aa9735b.chunk.js",
-          "./static/css/2.cd8bafaa.chunk.css",
-         "./static/js/main.8de19acc.chunk.js",
-         "./static/js/runtime-main.cfbbd54e.js",
+          "./static/js/2.0ec1f8d9.chunk.js",
+          "./static/css/2.620f3d88.chunk.css",
+         "./static/js/main.55dd54df.chunk.js",
+         "./static/js/runtime-main.5bc791e0.js",
          "./static/css/main.155c1d57.chunk.css",
           "./index.html",
           "./logo144.png"
@@ -50,13 +50,17 @@ self.addEventListener('activate', function(event) {
 
 self.addEventListener('fetch', function(event) {
 
-  //if(event.request.url==='http://localhost:3000/static/js/main.chunk.js'){
+  if(event.request.url==='http://localhost:3000/static/js/main.chunk.js'){
+    try{
     event.waitUntil(
-        self.registration.showNotification("Hello",{
+        this.registration.showNotification("Hello",{
           body:"Hello From test push ntoifcation",
         })
     )
-  //}
+    }catch(e){
+      console.log(e);
+    }
+  }
     console.log('Fetch event for ', event.request.url);
     event.respondWith(
       caches.match(event.request).then(function(response) {
@@ -83,6 +87,18 @@ self.addEventListener('fetch', function(event) {
 
     
   });
+
+
+  self.addEventListener('push', function(event) {
+    console.log('Push message', event);
+    var title = 'Push message';
+    event.waitUntil(
+        self.registration.showNotification(title, {
+            body: 'The Message',
+            //icon: 'images/icon.png',
+           // tag: 'my-tag'
+    }));
+});
 
   
  
