@@ -26,7 +26,7 @@ self.addEventListener('install', function(event) {
           "./static/css/2.620f3d88.chunk.css",
          "./static/js/main.47d6964d.chunk.js",
          "./static/js/runtime-main.5bc791e0.js",
-         "./static/css/main.155c1d57.css",
+         "./static/css/main.155c1d57.chunk.css",
           "./index.html",
           "./logo144.png"
         ])
